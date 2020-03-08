@@ -3,7 +3,6 @@ import {NavLink} from 'react-router-dom';
 import "../styles/index.scss";
 
 const navItems = [
-    // {name: 'Beeru', path: "/", exact: true},
     {name: 'Home', path: "/"},
     {name: 'Favorites', path: "/favorites"}
 ]

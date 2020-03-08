@@ -22,9 +22,6 @@ class Api extends Component {
           });
           console.log(this.state.items)
         },
-        // Uwaga: to ważne, żeby obsłużyć błędy tutaj, a
-        // nie w bloku catch(), aby nie przetwarzać błędów
-        // mających swoje źródło w komponencie.
         (error) => {
           this.setState({
             isLoaded: true,
