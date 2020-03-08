@@ -1,0 +1,35 @@
+// @import '../base/colors';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: $main-color;
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    
+
+    &__logo {
+        padding: 5px 15px;
+        font-size: 40px;
+        font-weight: normal;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        
+        .nav__link {
+            padding: 5px 15px;
+
+            a {
+                color: #fff;
+            }
+            
+        }
+    }
+}
+
+
+// .nav
