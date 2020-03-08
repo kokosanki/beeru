@@ -5,6 +5,8 @@ import {BrowserRouter} from 'react-router-dom';
 import NavLink from './Navigation';
 import Logo from './Logo';
 import Search from './Search';
+import Api from './Api';
+import Product from '../components/Product';
 
 class App extends Component {
   render() { 
@@ -18,7 +20,9 @@ class App extends Component {
         </nav>
         <Search />
         </header>
-        
+        <main>
+          <Api />
+        </main>
       </div>
       </BrowserRouter> 
      );
