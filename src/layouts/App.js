@@ -4,6 +4,7 @@ import '../styles/index.scss';
 import {BrowserRouter} from 'react-router-dom';
 import NavLink from './Navigation';
 import Logo from './Logo';
+import Search from './Search';
 
 class App extends Component {
   render() { 
@@ -15,6 +16,7 @@ class App extends Component {
             <Logo />
         {<NavLink />}
         </nav>
+        <Search />
         </header>
         
       </div>

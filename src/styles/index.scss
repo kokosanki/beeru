@@ -1,7 +1,9 @@
 @import './base/reset';
 @import './base/colors';
+@import './base/fonts';
 @import './components/Navigation';
 @import './components/App';
+@import './components/Search';
 
 body {
   margin: 0;

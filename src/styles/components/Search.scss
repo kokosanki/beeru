@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+
+  &__input {
+    width: 50vw;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    font-family: $basic-font;
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  &__btn {
+    font-family: $basic-font;
+    color: #fff;
+    background-color: $main-color;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    &:active {
+        background-color: #ffaa00;
+    }
+  }
+}
