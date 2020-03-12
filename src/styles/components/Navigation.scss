@@ -1,35 +1,48 @@
-// @import '../base/colors';
-
 .nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: $main-color;
-    color: #fff;
-    font-family: $main-font;
-    
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-color;
+  color: #fff;
+  font-family: $main-font;
+  height: 60px;
 
+  &__logo {
+    font-size: 40px;
+    font-weight: normal;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+
+    .nav__link {
+      padding: 0 15px;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .nav {
     &__logo {
-        padding: 5px 15px;
-        font-size: 40px;
-        font-weight: normal;
+      padding: 0 10px;
+      font-size: 30px;
+      height: 30px;
     }
 
     &__links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 25px;
-        
-        .nav__link {
-            padding: 5px 15px;
+      font-size: 20px;
 
-            a {
-                color: #fff;
-            }
-            
-        }
+      .nav__link {
+        padding: 0 10px;
+      }
     }
+  }
 }
-
-
-// .nav

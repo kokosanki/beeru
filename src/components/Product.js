@@ -1,9 +1,11 @@
 import React from 'react';
+import AddFavorite from './AddFavorite';
 
-const Product = ({ name, tagline, description, id, src }) => {
+const Product = ({ name, tagline, description, id, src, toggleFavorite, favoriteBeers, favorites, items, isActive }) => {
+
   return (
     <article className="Products__product">
-      <div class="product__presentation">
+      <div className="product__presentation">
         <div className="product__left">
           <img className="product__image" alt={id} src={src} />
         </div>
@@ -14,7 +16,7 @@ const Product = ({ name, tagline, description, id, src }) => {
       </div>
       <div className="product__favorite">
         <h1 className="product__title">{name}</h1>
-        <div className="product__isFavorite">Like</div>
+        <AddFavorite id={id} toggleFavorite={toggleFavorite} favorites={favorites} items={items} isActive={isActive} />
       </div>
     </article>
   );

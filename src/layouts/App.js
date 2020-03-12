@@ -1,32 +1,25 @@
-import React, { Component } from 'react';
-import '../styles/components/App.scss';
-import '../styles/index.scss';
-import {BrowserRouter} from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import NavLink from './Navigation';
 import Logo from './Logo';
-import Search from './Search';
-import Api from './Api';
-import Product from '../components/Product';
+import Page from './Page';
+import '../styles/components/App.scss';
+import '../styles/index.scss';
 
-class App extends Component {
-  render() { 
-    return (
-      <BrowserRouter>
+const App = () => {
+  return (
+    <BrowserRouter>
       <div>
         <header>
           <nav className="nav">
             <Logo />
-        {<NavLink />}
-        </nav>
-        <Search />
+            {<NavLink />}
+          </nav>
         </header>
-        <main>
-          <Api />
-        </main>
+        <main>{<Page />}</main>
       </div>
-      </BrowserRouter> 
-     );
-  }
-}
- 
+    </BrowserRouter>
+  );
+};
+
 export default App;

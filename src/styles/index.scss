@@ -1,10 +1,11 @@
 @import './base/reset';
 @import './base/colors';
 @import './base/fonts';
+@import './base/helpers';
 @import './components/Navigation';
 @import './components/App';
-@import './components/Search';
 @import './components/Products';
+@import './components/Favorites';
 
 body {
   margin: 0;
