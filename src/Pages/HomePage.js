@@ -1,5 +1,5 @@
 import React from 'react';
-import Products from '../layouts/Products';
+import Products from '../components/Products';
 
 const HomePage = ({ favorites, items, favoriteBeers, toggleFavorite }) => {
   console.log(items);

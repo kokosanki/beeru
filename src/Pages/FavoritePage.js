@@ -1,5 +1,5 @@
 import React from 'react';
-import Favorites from '../layouts/Favorites';
+import Favorites from '../components/Favorites';
 
 const FavoritePage = ({ favorites, items, favoriteBeers, toggleFavorite }) => {
   return (
