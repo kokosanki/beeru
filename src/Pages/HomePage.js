@@ -1,17 +1,8 @@
 import React from 'react';
 import Products from '../components/Products';
 
-const HomePage = ({ favorites, items, favoriteBeers, toggleFavorite }) => {
-  console.log(items);
-  items.map(item => console.log(item.id));
-  return (
-    <Products
-      items={items}
-      favorites={favorites}
-      favoriteBeers={favoriteBeers}
-      toggleFavorite={toggleFavorite}
-    />
-  );
+const HomePage = ({ ...props }) => {
+  return <Products {...props} />;
 };
 
 export default HomePage;

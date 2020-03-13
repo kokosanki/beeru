@@ -35,10 +35,8 @@ class Page extends Component {
   }
 
   getFavorites = () => {
-    let items = this.state.items;
-    let favorites = this.state.favorites;
-    let res = items.filter(item => favorites.includes(item.id.toString()));
-    console.log(res);
+    const {items, favorites} = this.state;
+    const res = items.filter(item => favorites.includes(item.id.toString()));
     this.setState({
       favoriteBeers: res,
     });
@@ -55,10 +53,13 @@ class Page extends Component {
         favorites: this.state.favorites.filter(item => item !== id),
       });
     }
-    setTimeout(() => {
-      this.getFavorites();
-    }, 1000);
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.favorites !== this.state.favorites) {
+      this.getFavorites();
+    }
+  }
 
   render() {
     const { error, isLoaded, items } = this.state;
@@ -66,7 +67,7 @@ class Page extends Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return (
-        <div class="Loader__container">
+        <div className="Loader__container">
           <img
             className="Loader__icon"
             alt="Beer"

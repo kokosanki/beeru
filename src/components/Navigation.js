@@ -10,7 +10,7 @@ const navItems = [
 const Navigation = () => {
   const menu = navItems.map(item => (
     <li className="nav__link" key={item.name}>
-      <NavLink to={item.path} exact={item.exact ? item.exact : false}>
+      <NavLink to={item.path} exact={item.exact || false}>
         {item.name}
       </NavLink>
     </li>

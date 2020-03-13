@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from './Product';
 
-const Products = ({ favorites, items, favoriteBeers, toggleFavorite }) => {
+const Products = ({ favorites, items, toggleFavorite }) => {
   return (
     <ul className="Products">
       {items.map(item => (

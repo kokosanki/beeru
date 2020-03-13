@@ -10,16 +10,13 @@ class AddFavorite extends Component {
 
   handleClick = e => {
     this.props.toggleFavorite(e, e.target.id);
-    console.log('click');
-    if (this.state.isActive) {
-      this.setState({
-        isActive: false,
-      });
-    } else {
-      this.setState({
-        isActive: true,
-      });
-    }
+    return this.state.isActive
+      ? this.setState({
+          isActive: false,
+        })
+      : this.setState({
+          isActive: true,
+        });
   };
   render() {
     return (

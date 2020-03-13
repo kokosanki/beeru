@@ -1,7 +1,7 @@
 import React from 'react';
 import AddFavorite from './AddFavorite';
 
-const Product = ({ name, tagline, description, id, src, toggleFavorite, favoriteBeers, favorites, items, isActive }) => {
+const Product = ({ name, tagline, description, id, src, toggleFavorite, favorites, items, isActive }) => {
 
   return (
     <article className="Products__product">
