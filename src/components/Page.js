@@ -65,7 +65,15 @@ class Page extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return (
+        <div class="Loader__container">
+          <img
+            className="Loader__icon"
+            alt="Beer"
+            src="../assets/beer_i.png"
+          ></img>
+        </div>
+      );
     } else {
       return (
         <>
