@@ -5,7 +5,9 @@ const Favorites = ({ favorites, items, favoriteBeers, toggleFavorite }) =>
   (!favorites.length && (
     <div className="Favorites">
       <div className="Favorites__noFavorites">
-        <p className="noFavorites__text">Your favorite beers will appear here:</p>
+        <p className="noFavorites__text">
+          Your favorite beers will appear here:
+        </p>
         <img
           className="noFavorites__img"
           alt="No favorite beers found"

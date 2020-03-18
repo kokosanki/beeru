@@ -1,7 +1,9 @@
 import React from 'react';
 import Product from './Product';
 
-const Products = ({ favorites, items, toggleFavorite }) => {
+const Products = ({ favorites, items, toggleFavorite, db }) => {
+  const allFavorites = []
+  favorites.map(fav => allFavorites.push(fav.id))
   return (
     <ul className="Products">
       {items.map(item => (
@@ -15,7 +17,7 @@ const Products = ({ favorites, items, toggleFavorite }) => {
           description={item.description}
           favorites={favorites}
           items={items}
-          isActive={favorites.includes(item.id.toString()) ? true : false}
+          isActive={allFavorites.includes(item.id.toString()) ? true : false}
         />
       ))}
     </ul>
