@@ -13,10 +13,12 @@ const App = () => {
         <header>
           <nav className="nav">
             <Logo />
-            {<NavLink />}
+            <NavLink />
           </nav>
         </header>
-        <main>{<Page />}</main>
+        <main>
+          <Page />
+        </main>
       </div>
     </BrowserRouter>
   );
